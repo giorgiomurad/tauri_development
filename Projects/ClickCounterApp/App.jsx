@@ -1,14 +1,13 @@
 import { useState } from "react";
 import "./App.css";
 
-
+let counter = 0;
 function App() {
   const [message, setMessage] = useState('The Button Has Not Been Clicked.');
-  const [counter, setCounter] = useState(1);
 
   
   function handleClick() {
-    setCounter(counter+1);
+    counter = counter+1;
 
     if (counter === 1)
       setMessage('You Have Clicked The Button Once.');
